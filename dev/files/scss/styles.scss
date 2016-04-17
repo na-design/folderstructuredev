@@ -1,0 +1,77 @@
+/*
+Site Name:  Hotel
+Author: Net Affinity
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Base & Theme
+	1.1 Bootstrap
+	1.2 Variables
+	1.3 Mixins
+	1.4 Reset
+	1.5 Helpers
+2.0 Fonts
+3.0 Plugins
+	3.1 Fancybox
+	3.2 Owl Carousel
+	3.3 Animate	
+3.0 Theme & Layouts
+	3.1 Variable
+	3.2 Mixins
+	3.3 Main
+	3.4 Weddings
+	3.5 Dining
+4.0 Components
+	5.1 Map
+	5.2 Carousel
+	5.3 Slides
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Base & Theme
+--------------------------------------------------------------*/
+
+@import "base/_bootstrap.scss";
+@import "theme/_variables.scss";
+@import "theme/_mixins.scss";
+@import "base/_reset.scss";
+@import "base/_helpers.scss";
+/*--------------------------------------------------------------
+2.0 Fonts
+--------------------------------------------------------------*/
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,600|Lato|Roboto:400,500,700";
+@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css";
+@import "../css/font.css";
+
+/*--------------------------------------------------------------
+2.0 Plugins
+--------------------------------------------------------------*/
+@import "plugins/_fancybox.scss";
+@import "plugins/_owl-carousel.scss";
+@import "plugins/_animate.scss";
+@import "plugins/_tooltip.scss";
+
+/*--------------------------------------------------------------
+3.0 Layout
+--------------------------------------------------------------*/
+@import "base/_forms.scss";
+@import "theme/_main.scss";
+@import "theme/_inner.scss";
+@import "components/_hotelpages.scss";
+
+/*--------------------------------------------------------------
+4.0 Components
+--------------------------------------------------------------*/
+
+@import "components/_searchbox.scss";
+@import "components/_mobile-menu.scss";
+@import "components/_menu.scss";
+@import "components/_map.scss";
+
+
+
