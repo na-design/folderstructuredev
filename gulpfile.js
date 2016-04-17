@@ -103,3 +103,9 @@ gulp.task('build', function(callback) {
     callback
   )
 })
+
+
+gulp.task('sassdoc', function () {
+  return gulp.src('src/sass/**/*.scss')
+    .pipe(sassdoc());
+});

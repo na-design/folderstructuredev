@@ -1,9 +1,11 @@
 // Colors
+/// Primary Color
 $primary-color:				#844882;
 $primary-purple:			#844882;
 $primary-hotels:			#efb841;
 $primary-aparts:			#82d2d6;
 $primary-guests:			#bac93a;
+/// Secondary Color
 $secondary-color: 		 	#72a9a3;
 $gray-base:              	#000;
 $gray-darker:            	lighten($gray-base, 13.5%);
@@ -19,6 +21,7 @@ $link-color:				$primary-color;
 $link-hover-color:			darken($primary-color,10%);
 
 // Typography
+/// Sans Serif Font Family
 $font-family-sans-serif:  	"Lato", Helvetica, Arial, sans-serif;
 $font-family-sans-nav:  	'Open Sans', sans-serif;
 $font-family-sans-headings: 'Roboto', sans-serif;
