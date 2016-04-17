@@ -1,0 +1,179 @@
+/*--------------------------------------------------------------
+HEADER
+--------------------------------------------------------------*/
+.main-nav, .scroll-nav {
+	position: fixed;
+	top: 0;
+	z-index: 3;
+	background-color: #fff;
+	@include anim(800ms, ease-in-out);
+	.logo{
+		position: absolute;
+		padding: 3px 20px;
+		background-color: #fff;
+		box-shadow: 0px 0px 12px #888;
+		@media (max-width: 992px) {
+		left:50%;
+		margin-left: -79px;
+		}
+	}
+	.book-now-btn{
+		width:100%;
+		background-color: $primary-color;
+		height:56px;
+		color:#fff;
+		cursor:pointer;
+		@include anim(400ms, ease-in-out);
+		@media (max-width: 767px) {
+		width:50%;
+		float:right;
+		}
+		&:hover{
+			background-color: $secondary-color;
+		}
+		span{
+			text-transform: uppercase;
+			position: relative;
+			font-size: 20px;
+			top: 12px;
+			left: 24px;
+			@media (max-width: 1200px) {
+			left:10px;
+			}
+			@media (max-width: 992px) {
+			left:56px;
+			}
+			@media (max-width: 767px) {
+			display:none;
+			}
+		}
+		i {
+			position: relative;
+			top: 15px;
+			font-size: 27px;
+			left: 30px;
+			@media (max-width: 1200px) {
+			left:16px;
+			}
+			@media (max-width: 992px) {
+			left:68px;
+			}
+			@media (max-width: 767px) {
+			left: 50%;
+			margin-left: -11px;
+			}
+		}
+	}
+	nav{
+		height:56px;
+		@media (max-width: 992px) {
+		display:none;
+		}
+		ul{
+			float:left;
+			margin-top: 20px;
+			li{
+				display:inline;
+				position:relative;
+				 ul{
+                    display: none;
+                    position: absolute;
+                    left:0px;
+                    background-color: #fff;
+                    text-align: left;
+                    top: 16px;
+                    width: 200px;
+                     padding-top: 0;
+                    li{
+                    	display:block;
+	                    a{
+	                    color: #888;
+	                    font-size: 11px;
+	                    padding: 9px 15px;
+	                    display:block;
+	                    margin-top: 0;
+	                    border-top: 3px solid #efefef;
+	                    &:hover{
+	                        color:$primary-color;
+							border-top: 3px solid $primary-color;
+							background-color: #efefef;
+	                        }
+
+	                	}
+                    }
+                   
+                }
+				a{
+					padding: 17px 15px 21px;
+					margin-top: 5px;
+					color: #333;
+					font-size: 15px;
+					border-top: 3px solid #fff;
+					@include anim(200ms, ease-in-out);
+					@media (max-width: 1200px) {
+					padding: 16px 9px;
+					}
+					&:hover{
+						color:$primary-color;
+						border-top: 3px solid $primary-color;
+
+					}
+				}
+			}
+		}
+		ul.left{
+			width:62.5;
+		}
+		ul.left{
+			width:37.5;
+		}
+	}
+}/* main-nav */
+
+nav ul >li:hover ul{
+	display: block;
+	@media (max-width: 800px) {
+	display: none;
+	}
+}
+.scroll-nav{
+	top:-200px;
+	z-index: 500;
+	@include anim(1000ms, ease-in-out);
+		nav{
+		height:56px;
+		ul{
+			float:left;
+			width:100%;
+			margin-top: 20px;
+			li{
+				display:inline;
+				a{
+					padding: 17px 15px 21px;
+					margin-top: 5px;
+					color: #333;
+					font-size: 15px;
+					border-top: 3px solid #fff;
+					@include anim(200ms, ease-in-out);
+					&:hover{
+						color:$primary-color;
+						border-top: 3px solid $primary-color;
+
+					}
+					@media (max-width: 1200px) {
+					padding: 16px 10px;
+					}
+				}
+			}
+		}
+	}
+	.logo{
+		@media (max-width: 1200px) {
+		padding:3px 7px;
+		}
+		@media (max-width: 992px) {
+		left:50%;
+		margin-left: -62px;
+		}
+	}
+}
