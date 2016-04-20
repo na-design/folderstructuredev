@@ -10,6 +10,7 @@ var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
+var fileinclude = require('gulp-file-include');
 var runSequence = require('run-sequence');
 
 
@@ -20,6 +21,15 @@ gulp.task('hello', function() {
 
 // Development Tasks 
 // -----------------
+
+gulp.task('html', function() {
+  return gulp.src('dev/files/pages/*.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: 'dev/files/includes'
+    }))
+    .pipe(gulp.dest('dev/'))
+});
 
 // Start browserSync server
 gulp.task('browserSync', function() {
@@ -39,9 +49,12 @@ gulp.task('sass', function() {
     }));
 })
 
+
 // Watchers
 gulp.task('watch', function() {
   gulp.watch('dev/files/scss/**/*.scss', ['sass']);
+  gulp.watch('dev/files/**/*.html',['html']);
+  gulp.watch('dev/files/**/*.html',browserSync.reload);
   gulp.watch('dev/*.html', browserSync.reload);
   gulp.watch('dev/files/js/**/*.js', browserSync.reload);
 })
@@ -58,6 +71,7 @@ gulp.task('useref', function() {
     .pipe(gulpIf('*.css', cssnano({discardComments: {removeAll: true}})))
     .pipe(gulp.dest('dist'));
 });
+
 
 // Optimizing Images 
 gulp.task('images', function() {
@@ -91,7 +105,7 @@ gulp.task('clean:dist', function() {
 // ---------------
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'browserSync', 'watch'],
+  runSequence(['html', 'sass','browserSync', 'watch', ],
     callback
   )
 })
